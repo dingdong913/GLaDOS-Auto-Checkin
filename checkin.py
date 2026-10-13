@@ -73,7 +73,9 @@ def main():
                 ok += 1
                 points = j.get("points", "-")
                 status = "✅ 成功"
-            elif "repeat" in msg_lower or "already" in msg_lower:
+            elif "repeat" in msg_lower or "already" in msg_lower \
+                    or "tomorrow" in msg_lower or "observation logged" in msg_lower \
+                    or "logged" in msg_lower:
                 repeat += 1
                 status = "🔁 已签到"
             else:
